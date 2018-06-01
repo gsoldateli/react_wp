@@ -1,3 +1,17 @@
+## POST Install steps:
+
+### Frontend:
+
+1.  Change Wordpress API in [frontend/config.js](https://github.com/gsoldateli/react_wp/blob/master/frontend/config.js)
+
+### Backend (Wordpress):
+
+1.  Add the line `define( 'FRONTEND_ORIGIN', 'http://localhost:3000' );` to your `wordpress/wp-config.php` file to allow wordpress API to respond your current nodeJS server.
+
+---
+
+## Original Readme:
+
 ![WordPress + React Starter Kit](frontend/static/images/wordpress-plus-react-header.png)
 
 Postlight's Headless WordPress + React Starter Kit is an automated toolset that will spin up two things:
