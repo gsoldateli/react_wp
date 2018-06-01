@@ -7,6 +7,6 @@
  * @return str Frontend origin URL, i.e., http://localhost:3000.
  */
 function get_frontend_origin() {
-	return 'http://localhost:3000';
+	return FRONTEND_ORIGIN;
 }
 

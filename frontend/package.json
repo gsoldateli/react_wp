@@ -6,20 +6,22 @@
     "scripts": {
         "dev": "node server.js",
         "build": "next build",
-        "start": "next start",
+        "start": "NODE_ENV=production node server.js",
+        "start-false": "next start",
+        "start-wp": "wp server --host=0.0.0.0",
         "docker:build": "docker build -t frontend .",
         "docker:clean": "docker rm -f frontend || true",
         "docker:run": "docker run -p 3000:3000 --name frontend frontend",
         "docker:stop": "docker stop frontend",
         "docker:start": "docker start frontend && yarn run docker:logs",
         "docker:logs": "docker logs -f frontend",
-        "deploy":
-            "yarn run docker:build && yarn run docker:clean && yarn run docker:run"
+        "deploy": "yarn run docker:build && yarn run docker:clean && yarn run docker:run"
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "cors": "^2.8.4",
         "express": "^4.16.2",
         "isomorphic-unfetch": "^2.0.0",
         "next": "latest",
