@@ -1,1 +1,1 @@
-export const Config = { apiUrl: 'https://maodoce.com.br/wp-headless' };
+export const Config = { apiUrl: 'https://wpreact.000webhostapp.com/' };
